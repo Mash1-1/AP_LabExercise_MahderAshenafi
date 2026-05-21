@@ -1,0 +1,128 @@
+/* --- GLOBAL DEFAULTS (DARK / GLITCH MODE) --- */
+.root {
+    -fx-background-color: #0a0a0a;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-accent: #ABE467;
+}
+
+/* --- TOOLBAR & HEADER --- */
+.tool-bar {
+    -fx-background-color: #111111;
+    -fx-border-color: #ABE467;
+    -fx-border-width: 0 0 1px 0;
+}
+
+/* --- BUTTONS --- */
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ABE467;
+    -fx-border-color: #ABE467;
+    -fx-border-width: 1px;
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;
+    -fx-cursor: hand;
+    -fx-padding: 4px 12px; /* Slightly wider */
+    -fx-font-size: 12px;
+}
+
+.button:hover {
+    -fx-background-color: #ABE467;
+    -fx-text-fill: #0a0a0a;
+    -fx-effect: dropshadow(two-pass-box, #ABE467, 5, 0.4, 0, 0); /* Softer hover glow */
+}
+
+/* --- TABS --- */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #0a0a0a;
+}
+
+.tab {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: white;
+    -fx-background-radius: 0px;
+    -fx-border-color: #333333;
+    -fx-border-width: 1px 1px 0px 1px;
+}
+
+.tab:selected {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #ABE467;
+    -fx-border-width: 2px 2px 0px 2px;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #ABE467;
+}
+
+.tab-pane .tab:selected .focus-indicator {
+    -fx-border-width: 0;
+}
+
+/* --- TEXT AREA (THE NOTEPAD) --- */
+.text-area {
+    -fx-background-color: #0a0a0a;
+    -fx-text-fill: #ABE467;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal; /* Turned off bold for readability */
+}
+
+/* Much softer, highly readable glitch effect */
+.text-area .text {
+    -fx-effect: dropshadow(two-pass-box, rgba(171, 228, 103, 0.3), 1, 0.0, 1, 1);
+}
+
+.text-area .content {
+    -fx-background-color: #0a0a0a;
+}
+
+/* --- THE LIGHT MODE OVERRIDES --- */
+.light-mode.root {
+    -fx-background-color: #f4f4f4;
+}
+
+.light-mode .tool-bar {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #888888;
+}
+
+.light-mode .button {
+    -fx-text-fill: #333333;
+    -fx-border-color: #333333;
+}
+
+.light-mode .button:hover {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-effect: none;
+}
+
+.light-mode .tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #f4f4f4;
+}
+
+.light-mode .tab {
+    -fx-background-color: #dddddd;
+    -fx-border-color: #aaaaaa;
+}
+
+.light-mode .tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #333333;
+}
+
+.light-mode .tab .tab-label {
+    -fx-text-fill: #333333;
+}
+
+.light-mode .text-area,
+.light-mode .text-area .content {
+    -fx-background-color: #ffffff;
+}
+
+.light-mode .text-area {
+    -fx-text-fill: #111111;
+}
+
+.light-mode .text-area .text {
+    -fx-effect: none;
+}
